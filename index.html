@@ -1,0 +1,827 @@
+            clip-path: polygon(0 50%, 3% 0, 6% 50%, 9% 100%, 12% 50%, 15% 0, 18% 50%, 21% 100%, 24% 50%, 27% 0, 30% 50%, 33% 100%, 36% 50%, 39% 0, 42% 50%, 45% 100%, 48% 50%, 51% 0, 54% 50%, 57% 100%, 60% 50%, 63% 0, 66% 50%, 69% 100%, 72% 50%, 75% 0, 78% 50%, 81% 100%, 84% 50%, 87% 0, 90% 50%, 93% 100%, 96% 50%, 100% 50%);
+            border-radius: 8px;
+        }}
+
+        .pirate-mark,
+        .corner-wheel,
+        .compass,
+        .countdown-wrap,
+        .map-rose,
+        .coins-right,
+        .message-box,
+        .boton-contenedor,
+        h1,
+        .subtitulo,
+        .host,
+        .card,
+        .boat-border {{
+            position: relative;
+            z-index: 4;
+        }}
+
+        .pirate-mark {{
+            position: absolute;
+            top: 118px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: clamp(130px, 18vw, 170px);
+            opacity: 0.06;
+            pointer-events: none;
+            z-index: 1;
+        }}
+
+        .pirate-mark svg,
+        .corner-wheel svg,
+        .compass svg,
+        .pirate-ship svg,
+        .map-rose svg,
+        .boat-border svg {{
+            width: 100%;
+            height: 100%;
+            display: block;
+        }}
+
+        .corner-wheel {{
+            position: absolute;
+            top: 18px;
+            left: 18px;
+            width: 52px;
+            height: 52px;
+            opacity: 0.85;
+            animation: wheelSpin 14s linear infinite;
+        }}
+
+        .compass {{
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid rgba(122, 81, 33, 0.56);
+            background: rgba(255,255,255,0.10);
+            display: grid;
+            place-items: center;
+        }}
+
+        h1 {{
+            margin: 18px 0 4px;
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2rem, 4.4vw, 3.2rem);
+            line-height: 0.98;
+            letter-spacing: 1px;
+            color: #7a4b1f;
+            text-shadow: 0 0 8px rgba(255,255,255,0.18);
+        }}
+
+        .subtitulo {{
+            margin: 0 0 8px;
+            font-family: 'Marcellus', serif;
+            font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+            font-weight: 700;
+            color: #9b6423;
+        }}
+
+        .host {{
+            margin-bottom: 10px;
+            font-size: clamp(1rem, 1.8vw, 1.26rem);
+            font-weight: 700;
+            color: #5b3a1b;
+        }}
+
+        .card {{
+            width: min(100%, 610px);
+            margin: 8px auto 0;
+            padding: 16px 16px;
+            border-radius: 24px;
+            line-height: 1.48;
+            font-size: clamp(0.98rem, 1.45vw, 1.06rem);
+            color: #5b3a1b;
+            background:
+                linear-gradient(180deg, rgba(255,255,255,0.22), rgba(255,255,255,0.10));
+            border: 1px solid rgba(122, 81, 33, 0.16);
+        }}
+
+        .card p {{
+            margin: 9px 0;
+        }}
+
+        .card strong {{
+            color: #8a5621;
+            font-weight: 700;
+        }}
+
+        .message-box {{
+            width: min(100%, 620px);
+            margin: 14px auto 0;
+            padding: 0 14px;
+        }}
+
+        .mensaje {{
+            margin: 0;
+            font-family: 'Marcellus', serif;
+            font-size: clamp(1rem, 1.7vw, 1.32rem);
+            line-height: 1.36;
+            color: #67411d;
+        }}
+
+        .countdown-wrap {{
+            width: min(100%, 620px);
+            margin: 14px auto 0;
+            padding: 8px 8px 0;
+        }}
+
+        .countdown-title {{
+            margin: 0 0 8px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            text-transform: uppercase;
+            color: #9b6423;
+        }}
+
+        .countdown-grid {{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }}
+
+        .count-box {{
+            background: rgba(255,255,255,0.20);
+            border: 1px solid rgba(122, 81, 33, 0.14);
+            border-radius: 16px;
+            padding: 8px 5px;
+        }}
+
+        .count-value {{
+            display: block;
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.1rem, 1.8vw, 1.55rem);
+            font-weight: 700;
+            color: #7a4b1f;
+            line-height: 1;
+        }}
+
+        .count-label {{
+            display: block;
+            margin-top: 5px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: #8a5621;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }}
+
+        .countdown-sub {{
+            margin: 8px 0 0;
+            font-size: 0.82rem;
+            color: #7a4d20;
+            opacity: 0.9;
+        }}
+
+        .boton-contenedor {{
+            display: flex;
+            justify-content: center;
+            margin-top: 16px;
+            margin-bottom: 8px;
+        }}
+
+
+        .boton-imagen {{
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+
+            /* 🔥 ESTO ES CLAVE */
+            outline: none;
+            box-shadow: none;
+        }}
+
+        .boton-imagen-img {{
+            width: 140px;
+            height: 140px;
+            object-fit: contain;
+
+            filter: drop-shadow(0 6px 12px rgba(0,0,0,0.4));
+            transition: transform 0.2s ease;
+        }}
+
+        .boton-imagen-img:hover {{
+            transform: scale(1.1);
+        }}
+
+        .boton-imagen-img:active {{
+            transform: scale(0.95);
+        }}
+
+        .pirate-ship {{
+            position: absolute;
+            left: 8px;
+            bottom: 8px;
+            width: 126px;
+            height: 92px;
+            z-index: 4;
+            animation: shipSail 6s ease-in-out infinite;
+        }}
+
+        .boat-border {{
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            z-index: 6;
+            filter: drop-shadow(0 3px 6px rgba(0,0,0,0.28));
+            animation: moverBarcoBorde 14s linear infinite, balanceoBarco 2.2s ease-in-out infinite;
+        }}
+
+        .sunny-img {{
+            width: 100%;
+            height: auto;
+
+            filter: drop-shadow(0 6px 10px rgba(0,0,0,0.4));
+            animation: balanceoBarco 2.2s ease-in-out infinite;
+        }}
+
+        .map-rose {{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            width: 90px;
+            height: 90px;
+            opacity: 0.18;
+            z-index: 2;
+            animation: roseSpin 26s linear infinite;
+        }}
+
+        .coins-right {{
+            position: absolute;
+            right: 18px;
+            bottom: 16px;
+            width: 96px;
+            height: 66px;
+            z-index: 4;
+            pointer-events: none;
+        }}
+
+        .coin {{
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle at 35% 35%, #ffe9a3, #d6ac4a 60%, #9c6d1f 100%);
+            box-shadow: 0 0 10px rgba(214, 172, 74, 0.18);
+        }}
+
+        .coin.c1 {{ width: 24px; height: 24px; right: 0; bottom: 0; }}
+        .coin.c2 {{ width: 20px; height: 20px; right: 22px; bottom: 14px; }}
+        .coin.c3 {{ width: 16px; height: 16px; right: 46px; bottom: 3px; }}
+        .coin.c4 {{ width: 12px; height: 12px; right: 64px; bottom: 18px; }}
+        .coin.c5 {{ width: 10px; height: 10px; right: 80px; bottom: 8px; }}
+
+        .overlay-imagen {{
+            position: fixed;   /* 🔥 CLAVE */
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+
+            background: rgba(0,0,0,0.6);
+
+            display: none;   /* oculto al inicio */
+            justify-content: center;
+            align-items: center;
+
+            z-index: 9999;
+        }}
+
+        .overlay-imagen.activo {{
+            display: flex;
+        }}
+
+        .contenido-overlay {{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }}
+        
+        .overlay-imagen img {{
+            max-width: 90vw;
+            max-height: 90vh;
+
+            width: auto;
+            height: auto;
+
+            object-fit: contain;
+            border-radius: 20px;
+        }}
+
+        .cerrar-overlay {{
+            position: absolute;
+            top: -16px;
+            right: -16px;
+            width: 44px;
+            height: 44px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 26px;
+            font-weight: 700;
+            color: #fff8e7;
+            background: #ef2e24;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.24);
+        }}
+
+                @keyframes sunGlow {{
+            0% {{ transform: scale(1); opacity: 0.95; }}
+            50% {{ transform: scale(1.08); opacity: 1; }}
+            100% {{ transform: scale(1); opacity: 0.95; }}
+        }}
+
+        @keyframes cloudMove1 {{
+            0% {{ transform: translateX(0); }}
+            100% {{ transform: translateX(calc(100vw + 320px)); }}
+        }}
+
+        @keyframes cloudMove2 {{
+            0% {{ transform: translateX(0); }}
+            100% {{ transform: translateX(calc(-100vw - 220px)); }}
+        }}
+
+        @keyframes birdFloat {{
+            0% {{ transform: translateY(0); }}
+            50% {{ transform: translateY(-6px); }}
+            100% {{ transform: translateY(0); }}
+        }}
+
+        @keyframes seaGlow {{
+            0% {{ opacity: 0.55; }}
+            50% {{ opacity: 0.95; }}
+            100% {{ opacity: 0.55; }}
+        }}
+
+        @keyframes waveDrift1 {{
+            0% {{ transform: translateX(0) rotate(0deg) scaleX(1); }}
+            50% {{ transform: translateX(-10%) rotate(1deg) scaleX(1.04); }}
+            100% {{ transform: translateX(-20%) rotate(0deg) scaleX(1); }}
+        }}
+
+        @keyframes waveDrift2 {{
+            0% {{ transform: translateX(0) rotate(0deg) scaleX(1); }}
+            50% {{ transform: translateX(8%) rotate(-1deg) scaleX(1.03); }}
+            100% {{ transform: translateX(16%) rotate(0deg) scaleX(1); }}
+        }}
+
+        @keyframes waveDrift3 {{
+            0% {{ transform: translateX(0) rotate(0deg) scaleX(1); }}
+            50% {{ transform: translateX(-6%) rotate(0.8deg) scaleX(1.02); }}
+            100% {{ transform: translateX(-12%) rotate(0deg) scaleX(1); }}
+        }}
+
+        @keyframes waveLift1 {{
+            0% {{ margin-bottom: 0; }}
+            50% {{ margin-bottom: 16px; }}
+            100% {{ margin-bottom: 0; }}
+        }}
+
+        @keyframes waveLift2 {{
+            0% {{ margin-bottom: 0; }}
+            50% {{ margin-bottom: 22px; }}
+            100% {{ margin-bottom: 0; }}
+        }}
+
+        @keyframes waveLift3 {{
+            0% {{ margin-bottom: 0; }}
+            50% {{ margin-bottom: 14px; }}
+            100% {{ margin-bottom: 0; }}
+        }}
+
+        @keyframes sailAcross1 {{
+            0% {{ transform: translateX(0); }}
+            100% {{ transform: translateX(calc(100vw + 260px)); }}
+        }}
+
+        @keyframes sailAcross2 {{
+            0% {{ transform: translateX(0) scaleX(-1); }}
+            100% {{ transform: translateX(calc(-100vw - 260px)) scaleX(-1); }}
+        }}
+
+        @keyframes sailAcross3 {{
+            0% {{ transform: translateX(0); }}
+            100% {{ transform: translateX(calc(100vw + 220px)); }}
+        }}
+
+        @keyframes flotacionTarjeta {{
+            0% {{ transform: translateY(0); }}
+            50% {{ transform: translateY(-4px); }}
+            100% {{ transform: translateY(0); }}
+        }}
+
+        @keyframes wheelSpin {{
+            0% {{ transform: rotate(0deg); }}
+            100% {{ transform: rotate(360deg); }}
+        }}
+
+        @keyframes roseSpin {{
+            0% {{ transform: rotate(0deg); }}
+            100% {{ transform: rotate(360deg); }}
+        }}
+
+        @keyframes shipSail {{
+            0% {{ transform: translateY(0) rotate(-2deg); }}
+            25% {{ transform: translateY(-4px) rotate(2deg); }}
+            50% {{ transform: translateY(0) rotate(3deg); }}
+            75% {{ transform: translateY(4px) rotate(-2deg); }}
+            100% {{ transform: translateY(0) rotate(-2deg); }}
+        }}
+
+        @keyframes moverBarcoBorde {{
+            0% {{ top: -16px; left: 8px; }}
+            24% {{ top: -16px; left: calc(100% - 54px); }}
+            49% {{ top: calc(100% - 30px); left: calc(100% - 54px); }}
+            74% {{ top: calc(100% - 30px); left: 8px; }}
+            100% {{ top: -16px; left: 8px; }}
+        }}
+
+        @keyframes balanceoBarco {{
+            0% {{ transform: rotate(-8deg) translateY(0); }}
+            25% {{ transform: rotate(4deg) translateY(-4px); }}
+            50% {{ transform: rotate(8deg) translateY(0); }}
+            75% {{ transform: rotate(-4deg) translateY(4px); }}
+            100% {{ transform: rotate(-8deg) translateY(0); }}
+        }}
+
+        @keyframes pulsoBoton {{
+            0% {{ transform: scale(1); }}
+            50% {{ transform: scale(1.06); }}
+            100% {{ transform: scale(1); }}
+        }}
+
+        @keyframes aparecer {{
+            from {{ opacity: 0; transform: scale(0.92); }}
+            to {{ opacity: 1; transform: scale(1); }}
+        }}
+
+        @media (max-width: 768px) {{
+            .container-wrapper {{
+                width: 96vw;
+                height: min(94vh, 760px);
+            }}
+
+            .container {{
+                padding: 20px 12px 18px;
+            }}
+
+            .corner-wheel {{
+                width: 46px;
+                height: 46px;
+            }}
+
+            .compass {{
+                width: 44px;
+                height: 44px;
+            }}
+
+            h1 {{
+                font-size: clamp(1.7rem, 6vw, 2.5rem);
+            }}
+
+            .subtitulo {{
+                font-size: 0.9rem;
+            }}
+
+            .host {{
+                font-size: 0.95rem;
+            }}
+
+            .card {{
+                padding: 12px 10px;
+                font-size: 0.92rem;
+            }}
+
+            .mensaje {{
+                font-size: 0.96rem;
+            }}
+
+            .countdown-grid {{
+                gap: 6px;
+            }}
+
+            .count-box {{
+                padding: 7px 4px;
+            }}
+
+            .count-value {{
+                font-size: 1rem;
+            }}
+
+            .count-label {{
+                font-size: 0.66rem;
+            }}
+
+            .boton-imagen {{
+                width: 66px;
+                height: 66px;
+            }}
+
+            .pirate-ship {{
+                width: 92px;
+                height: 68px;
+            }}
+
+            .coins-right {{
+                width: 90px;
+                height: 64px;
+            }}
+
+            .bg-ship.s1 {{
+                width: 98px;
+                height: 64px;
+                bottom: 120px;
+                opacity: 0.24;
+            }}
+
+            .bg-ship.s2 {{
+                width: 90px;
+                height: 60px;
+                bottom: 145px;
+                opacity: 0.20;
+            }}
+
+            .bg-ship.s3 {{
+                width: 74px;
+                height: 50px;
+                bottom: 98px;
+                opacity: 0.16;
+            }}
+        }}
+    </style>
+</head>
+<body>
+
+    <div class="scene">
+        <div class="sun"></div>
+
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+
+        <div class="bird bird1">
+            <svg viewBox="0 0 40 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 15C7 7 12 7 20 14C28 7 33 7 38 15" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+            </svg>
+        </div>
+
+        <div class="sea">
+            <div class="sea-glow"></div>
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+
+            <div class="bg-ship s1">
+                <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M28 102H182L156 124H58L28 102Z" fill="#173246"/>
+                    <rect x="104" y="28" width="8" height="74" fill="#173246"/>
+                    <rect x="74" y="46" width="6" height="56" fill="#173246"/>
+                    <path d="M112 36L182 60H112V36Z" fill="#dce8ef"/>
+                    <path d="M104 48L54 72H104V48Z" fill="#c8d8e2"/>
+                    <path d="M128 44C137 44 148 48 154 54C148 60 137 64 128 64C119 64 108 60 102 54C108 48 119 44 128 44Z" fill="#0f1c28"/>
+                    <circle cx="128" cy="54" r="4" fill="#eef4f7"/>
+                </svg>
+            </div>
+
+            <div class="bg-ship s2">
+                <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M28 102H182L156 124H58L28 102Z" fill="#173246"/>
+                    <rect x="104" y="28" width="8" height="74" fill="#173246"/>
+                    <rect x="74" y="46" width="6" height="56" fill="#173246"/>
+                    <path d="M112 36L182 60H112V36Z" fill="#dce8ef"/>
+                    <path d="M104 48L54 72H104V48Z" fill="#c8d8e2"/>
+                    <path d="M128 44C137 44 148 48 154 54C148 60 137 64 128 64C119 64 108 60 102 54C108 48 119 44 128 44Z" fill="#0f1c28"/>
+                    <circle cx="128" cy="54" r="4" fill="#eef4f7"/>
+                </svg>
+            </div>
+
+            <div class="bg-ship s3">
+                <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M28 102H182L156 124H58L28 102Z" fill="#173246"/>
+                    <rect x="104" y="28" width="8" height="74" fill="#173246"/>
+                    <path d="M112 36L182 60H112V36Z" fill="#dce8ef"/>
+                    <path d="M104 48L54 72H104V48Z" fill="#c8d8e2"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-wrapper">
+        <div class="boat-border">
+            <img src="sunny.png" class="sunny-img">
+        </div>
+
+        <div class="container">
+            <div class="rope-top"></div>
+            <div class="rope-bottom"></div>
+
+            <div class="pirate-mark">
+                <svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" stroke="#6b4520" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="150" cy="92" r="34"/>
+                        <path d="M118 157C126 134 174 134 182 157"/>
+                        <path d="M120 62L138 80"/>
+                        <path d="M180 62L162 80"/>
+                        <path d="M82 186L132 144"/>
+                        <path d="M218 186L168 144"/>
+                        <path d="M82 144L132 186"/>
+                        <path d="M218 144L168 186"/>
+                    </g>
+                </svg>
+            </div>
+
+            <div class="corner-wheel">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="24" fill="none" stroke="#7a4f1f" stroke-width="6"/>
+                    <circle cx="50" cy="50" r="8" fill="#7a4f1f"/>
+                    <g stroke="#7a4f1f" stroke-width="6" stroke-linecap="round">
+                        <line x1="50" y1="8" x2="50" y2="28"/>
+                        <line x1="50" y1="72" x2="50" y2="92"/>
+                        <line x1="8" y1="50" x2="28" y2="50"/>
+                        <line x1="72" y1="50" x2="92" y2="50"/>
+                        <line x1="21" y1="21" x2="35" y2="35"/>
+                        <line x1="65" y1="65" x2="79" y2="79"/>
+                        <line x1="79" y1="21" x2="65" y2="35"/>
+                        <line x1="35" y1="65" x2="21" y2="79"/>
+                    </g>
+                </svg>
+            </div>
+
+            <div class="compass">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="42" fill="none" stroke="#7a4f1f" stroke-width="3"/>
+                    <path d="M50 12L58 50L50 88L42 50L50 12Z" fill="#7a4f1f"/>
+                    <path d="M12 50L50 42L88 50L50 58L12 50Z" fill="#f8eed1"/>
+                </svg>
+            </div>
+
+            <h1>{evento["titulo"]}</h1>
+            <p class="subtitulo">{evento["subtitulo"]}</p>
+            <p class="host"><strong>Anfitrión:</strong> {evento["anfitrion"]}</p>
+
+            <div class="card">
+                <p><strong>Fecha:</strong> {evento["fecha_texto"]}</p>
+                <p><strong>Hora:</strong> {evento["hora_texto"]}</p>
+                <p><strong>Lugar:</strong> {evento["lugar"]}</p>
+                <p><strong>Dirección:</strong> {evento["direccion"]}</p>
+            </div>
+
+            <div class="message-box">
+                <p class="mensaje">{evento["mensaje"]}</p>
+            </div>
+
+            <div class="countdown-wrap">
+                <p class="countdown-title">Cuenta regresiva · Hora CDMX</p>
+                <div class="countdown-grid">
+                    <div class="count-box">
+                        <span class="count-value" id="dias">00</span>
+                        <span class="count-label">Días</span>
+                    </div>
+                    <div class="count-box">
+                        <span class="count-value" id="horas">00</span>
+                        <span class="count-label">Horas</span>
+                    </div>
+                    <div class="count-box">
+                        <span class="count-value" id="minutos">00</span>
+                        <span class="count-label">Minutos</span>
+                    </div>
+                    <div class="count-box">
+                        <span class="count-value" id="segundos">00</span>
+                        <span class="count-label">Segundos</span>
+                    </div>
+                </div>
+                <p class="countdown-sub" id="horaActualCdmx">Cargando hora de CDMX...</p>
+            </div>
+
+            <div class="boton-contenedor">
+                <button class="boton-imagen" onclick="mostrarImagen()" aria-label="Abrir imagen">
+                    <img src="boton.png" class="boton-imagen-img">
+                </button>
+            </div>
+
+            <div class="pirate-ship">
+                <svg viewBox="0 0 260 170" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 118H210L180 146H72L30 118Z" fill="#4a2c17"/>
+                    <rect x="122" y="34" width="10" height="84" fill="#5b4636"/>
+                    <rect x="84" y="56" width="8" height="62" fill="#5b4636"/>
+                    <path d="M132 40L214 68H132V40Z" fill="#f6f0dd"/>
+                    <path d="M122 52L66 82H122V52Z" fill="#efe0b5"/>
+                    <path d="M92 60L48 78H92V60Z" fill="#f8ecd1"/>
+                    <path d="M150 50C160 50 174 55 182 62C174 69 160 74 150 74C140 74 126 69 118 62C126 55 140 50 150 50Z" fill="#111"/>
+                    <circle cx="150" cy="62" r="5" fill="#fff"/>
+                    <path d="M143 58L157 67" stroke="#111" stroke-width="2.2"/>
+                </svg>
+            </div>
+
+            <div class="map-rose">
+                <svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="70" cy="70" r="60" fill="none" stroke="rgba(122,81,33,0.34)" stroke-width="3"/>
+                    <circle cx="70" cy="70" r="42" fill="none" stroke="rgba(122,81,33,0.22)" stroke-width="2"/>
+                    <path d="M70 10L78 62L70 130L62 62L70 10Z" fill="rgba(122,81,33,0.36)"/>
+                    <path d="M10 70L62 62L130 70L62 78L10 70Z" fill="rgba(122,81,33,0.22)"/>
+                </svg>
+            </div>
+
+            <div class="coins-right">
+                <div class="coin c1"></div>
+                <div class="coin c2"></div>
+                <div class="coin c3"></div>
+                <div class="coin c4"></div>
+                <div class="coin c5"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlayImagen" class="overlay-imagen">
+        <div class="contenido-overlay">
+            <button class="cerrar-overlay" onclick="cerrarImagen()" aria-label="Cerrar">×</button>
+            <img src="One_Piece 1.png" alt="Imagen sorpresa">
+        </div>
+    </div>
+
+    <script>
+        function mostrarImagen() {{
+            document.getElementById("overlayImagen").style.display = "flex";
+        }}
+
+        function cerrarImagen() {{
+            document.getElementById("overlayImagen").style.display = "none";
+        }}
+
+        const eventoCDMX = "{evento["fecha_iso_cdmx"]}";
+        const zonaCDMX = "America/Mexico_City";
+
+        function getNowInMexicoCity() {{
+            const now = new Date();
+            const parts = new Intl.DateTimeFormat("en-CA", {{
+                timeZone: zonaCDMX,
+                year: "numeric",
+                month: "2-digit",
+                day: "2-digit",
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit",
+                hourCycle: "h23"
+            }}).formatToParts(now);
+
+            const map = Object.fromEntries(parts.map(p => [p.type, p.value]));
+            return new Date(
+                Number(map.year),
+                Number(map.month) - 1,
+                Number(map.day),
+                Number(map.hour),
+                Number(map.minute),
+                Number(map.second)
+            );
+        }}
+
+        function updateCountdown() {{
+            const nowCDMX = getNowInMexicoCity();
+            const target = new Date(eventoCDMX);
+            const diff = target - nowCDMX;
+
+            const horaFormateada = new Intl.DateTimeFormat("es-MX", {{
+                timeZone: zonaCDMX,
+                dateStyle: "full",
+                timeStyle: "medium"
+            }}).format(new Date());
+
+            document.getElementById("horaActualCdmx").textContent = "Hora actual en CDMX: " + horaFormateada;
+
+            if (diff <= 0) {{
+                document.getElementById("dias").textContent = "00";
+                document.getElementById("horas").textContent = "00";
+                document.getElementById("minutos").textContent = "00";
+                document.getElementById("segundos").textContent = "00";
+                return;
+            }}
+
+            const totalSeg = Math.floor(diff / 1000);
+            const dias = Math.floor(totalSeg / 86400);
+            const horas = Math.floor((totalSeg % 86400) / 3600);
+            const minutos = Math.floor((totalSeg % 3600) / 60);
+            const segundos = totalSeg % 60;
+
+            document.getElementById("dias").textContent = String(dias).padStart(2, "0");
+            document.getElementById("horas").textContent = String(horas).padStart(2, "0");
+            document.getElementById("minutos").textContent = String(minutos).padStart(2, "0");
+            document.getElementById("segundos").textContent = String(segundos).padStart(2, "0");
+        }}
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
+"""
+
+nombre_archivo = "Invitación Aldo.html"
+with open(nombre_archivo, "w", encoding="utf-8") as file:
+    file.write(html_template)
+
+print(f"Invitación guardada en: {os.path.abspath(nombre_archivo)}")
+webbrowser.open("file://" + os.path.abspath(nombre_archivo))
